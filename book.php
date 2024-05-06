@@ -56,6 +56,28 @@ $books = [
 
     <link rel="stylesheet" href="style/style.css">
     <title><?php echo $books[0]['title']; ?> Details</title>
+
+    <script>
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.onscroll = function() {
+            if (window.pageYOffset >= 100) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        };
+
+        function backToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <button id="back-to-top" onclick="backToTop()">^</button>
+
 </head>
 
 <body>
@@ -66,8 +88,14 @@ $books = [
 
         <div class="right-links">
 
+            <a href="home.php"><button class="btn">Your account</button></a>
+        </div>
+
+        <div class="right-links">
+
             <a href="php/logout.php"><button class="btn">Log Out</button></a>
         </div>
+
     </div>
     <main>
         <div class="book-details">
@@ -90,9 +118,9 @@ $books = [
                 </div>
             <?php endfor; ?>
 
-            <a href="home.php">Back to Home</a>
+           
         </div>
-        
+
     </main>
 </body>
 

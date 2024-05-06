@@ -4,7 +4,7 @@ session_start();
 // قم بتعيين البيانات المثبتة
 $fixedUsername = "Abdallateef";
 $fixedEmail = "user@example.com";
-$fixedAge = 25;
+$fixedAge = 20;
 
 // تحقق من صلاحية الجلسة
 if (!isset($_SESSION['valid'])) {
@@ -31,9 +31,15 @@ if (!isset($_SESSION['valid'])) {
         </div>
 
         <div class="right-links">
-           
+
+            <a href="book.php"><button class="btn">Your books</button></a>
+        </div>
+
+        <div class="right-links">
+
             <a href="php/logout.php"><button class="btn">Log Out</button></a>
         </div>
+
     </div>
     <main>
         <div class="main-box top">
@@ -48,6 +54,13 @@ if (!isset($_SESSION['valid'])) {
             <div class="bottom">
                 <div class="box">
                     <p>And you are <b><?php echo $fixedAge ?> years old</b>.</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="box">
+                    <p><b><?php echo $fixedUsername ?></b>, Welcome</p>
+                    <p>We are excited to have you join our reading platform. Enjoy exploring our collection of books and have a great reading experience.</p>
+
                 </div>
             </div>
         </div>

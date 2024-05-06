@@ -33,7 +33,7 @@ session_start();
                     $_SESSION['id'] = 1;
 
                     // تحويل المستخدم إلى الصفحة الرئيسية
-                    header("Location: home.php");
+                    header("Location: book.php");
                     exit;
                 } else {
                     echo "<div class='message'>
